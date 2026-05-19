@@ -1,18 +1,19 @@
 package model.entities;
 
-public class Groups {
+public class NationalTeams {
 
 	private Integer id;
 	private String name;
+	private Groups group;
 	
-	public Groups() {
+	public NationalTeams() {
 		
 	}
-	
-	public Groups(Integer id, String name) {
 
+	public NationalTeams(Integer id, String name, Groups group) {
 		this.id = id;
 		this.name = name;
+		this.group = group;
 	}
 
 	public Integer getId() {
@@ -29,6 +30,14 @@ public class Groups {
 
 	public void setName(String name) {
 		this.name = name;
+	}
+
+	public Groups getGroup() {
+		return group;
+	}
+
+	public void setGroup(Groups group) {
+		this.group = group;
 	}
 	
 	
