@@ -2,11 +2,11 @@ package model.dao;
 
 import java.util.List;
 
-import model.entities.Groups;
+import model.entities.Group;
 
 public interface GroupDAO {
 
-	Groups findById(Integer id);
-	List<Groups> findAll();
+	Group findById(Integer id);
+	List<Group> findAll();
 	
 }

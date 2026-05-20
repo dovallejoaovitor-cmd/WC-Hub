@@ -1,15 +1,15 @@
 package model.entities;
 
-public class Groups {
+public class Group {
 
 	private Integer id;
 	private String name;
 	
-	public Groups() {
+	public Group() {
 		
 	}
 	
-	public Groups(Integer id, String name) {
+	public Group(Integer id, String name) {
 
 		this.id = id;
 		this.name = name;
@@ -29,6 +29,11 @@ public class Groups {
 
 	public void setName(String name) {
 		this.name = name;
+	}
+
+	@Override
+	public String toString() {
+		return  name ;
 	}
 	
 	

@@ -2,25 +2,25 @@ package model.entities;
 
 import java.time.LocalDate;
 
-public class Players {
+public class Player {
 
 	private Integer id;
 	private String name;
 	private LocalDate birthDate;
 	private Integer age;
 	private String club;
-	private NationalTeams nation;
+	private NationalTeam nation;
 	private Integer rating;
 	private Integer goals;
 	private Integer assistances;
 	private Integer yellowCards;
 	private Integer redCards;
 	
-	public Players() {
+	public Player() {
 		
 	}
 
-	public Players(Integer id, String name, LocalDate birthDate, Integer age, String club, NationalTeams nation,
+	public Player(Integer id, String name, LocalDate birthDate, Integer age, String club, NationalTeam nation,
 			Integer rating, Integer goals, Integer assistances, Integer yellowCards, Integer redCards) {
 		this.id = id;
 		this.name = name;
@@ -75,11 +75,11 @@ public class Players {
 		this.club = club;
 	}
 
-	public NationalTeams getNation() {
+	public NationalTeam getNation() {
 		return nation;
 	}
 
-	public void setNation(NationalTeams nation) {
+	public void setNation(NationalTeam nation) {
 		this.nation = nation;
 	}
 
