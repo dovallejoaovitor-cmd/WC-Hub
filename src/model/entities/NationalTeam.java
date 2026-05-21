@@ -50,6 +50,11 @@ public class NationalTeam {
 	public void setFlagPath(String flagPath) {
 		this.flagPath = flagPath;
 	}
+
+	@Override
+	public String toString() {
+		return  name ;
+	}
 	
 	
 	

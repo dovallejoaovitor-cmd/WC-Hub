@@ -9,21 +9,41 @@ import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 import model.dao.DaoFactory;
 import model.dao.GroupDAO;
+import model.dao.NationalTeamDAO;
 import model.entities.Group;
+import model.entities.NationalTeam;
 
 public class Main extends Application{
 
 	public static void main(String[] args){
 			
-			GroupDAO gp = DaoFactory.createGroupDao();
-			Group group = gp.findById(1);
-			System.out.println(group);
-			
-			List<Group> list = gp.findAll();
-			for (Group obj : list) {
-				System.out.println(obj);
+		GroupDAO groupDao =
+			    DaoFactory.createGroupDao();
+
+			NationalTeamDAO ntDao =
+			    DaoFactory.createNationalTeamDao();
+
+			List<Group> groups =
+			    groupDao.findAll();
+
+			for(Group gp : groups) {
+
+			    System.out.println(
+			        gp.getName()
+			    );
+
+			    List<NationalTeam> teams =
+			        ntDao.findByGroup(gp);
+
+			    for(NationalTeam team : teams) {
+
+			        System.out.println(
+			            team.getName()
+			        );
+			    }
+
+			    System.out.println();
 			}
-			
 		}
 
 		
