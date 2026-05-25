@@ -8,6 +8,7 @@ public class Player {
 	private String name;
 	private LocalDate birthDate;
 	private Integer age;
+	private String position;
 	private String club;
 	private NationalTeam nation;
 	private Integer rating;
@@ -20,12 +21,13 @@ public class Player {
 		
 	}
 
-	public Player(Integer id, String name, LocalDate birthDate, Integer age, String club, NationalTeam nation,
+	public Player(Integer id, String name, LocalDate birthDate, Integer age, String position,String club, NationalTeam nation,
 			Integer rating, Integer goals, Integer assistances, Integer yellowCards, Integer redCards) {
 		this.id = id;
 		this.name = name;
 		this.birthDate = birthDate;
 		this.age = age;
+		this.position = position;
 		this.club = club;
 		this.nation = nation;
 		this.rating = rating;
@@ -122,6 +124,22 @@ public class Player {
 	public void setRedCards(Integer redCards) {
 		this.redCards = redCards;
 	}
+
+	public String getPosition() {
+		return position;
+	}
+
+	public void setPosition(String position) {
+		this.position = position;
+	}
+
+	@Override
+	public String toString() {
+		return "Player [id=" + id + ", name=" + name + ", birthDate=" + birthDate + ", age=" + age + ", position="
+				+ position + ", club=" + club + ", nation=" + nation + ", rating=" + rating + ", goals=" + goals
+				+ ", assistances=" + assistances + ", yellowCards=" + yellowCards + ", redCards=" + redCards + "]";
+	}
+	
 	
 	
 }
